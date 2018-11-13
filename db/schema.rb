@@ -13,10 +13,8 @@
 ActiveRecord::Schema.define(version: 2018_11_13_150334) do
 
   create_table "feedings", force: :cascade do |t|
-    t.integer "fish_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fish_id"], name: "index_feedings_on_fish_id"
   end
 
   create_table "fish", force: :cascade do |t|
