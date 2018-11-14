@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
    get '/feedings/last_meal', to: 'feedings#last_meal'
    get '/tanks/section/:sectionName', to: 'tanks#section'
-   resource :feedings, {only: [:create]}
-   resources :tanks, {only: [:index]}
+
+   resources :feedings, only: [:create]
+   resources :tanks, only: [:index, :create, :update, :destroy]
 
 end
