@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
    resources :feedings, only: [:create]
    resources :tanks, only: [:index, :create, :update, :destroy]
+   resources :fish, only:[:index, :create, :update, :destroy]
 
 end

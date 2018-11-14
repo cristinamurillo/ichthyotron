@@ -1,7 +1,6 @@
 class TanksController < ApplicationController
 
   def index
-    # byebug
     render json: Tank.all
   end
 

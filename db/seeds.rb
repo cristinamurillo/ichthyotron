@@ -13,12 +13,15 @@ Tank.destroy_all
 
 Feeding.create
 
-Tank.create(name: 'R2D2', section: 'Right')
-Tank.create(name: 'R2D1', section: 'Right')
-Tank.create(name: 'L31', section: 'Right')
-Tank.create(name: 'L21', section: 'Right')
+Tank.create(name: 'R2D2', section: 'Right', last_cleaning: DateTime.now)
+Tank.create(name: 'R2D1', section: 'Right', last_cleaning: DateTime.now)
+Tank.create(name: 'L31', section: 'Right', last_cleaning: DateTime.now)
+Tank.create(name: 'L21', section: 'Right', last_cleaning: DateTime.now)
 
 Fish.create(name: 'Alice', species: 'cichlid', tank_id: 1)
 Fish.create(name: 'Fred', species: 'cichlid', tank_id: 1)
+Fish.create(name: 'Lisa', species: 'cichlid', tank_id: 1)
+Fish.create(name: 'Roger', species: 'cichlid', tank_id: 1)
+Fish.create(name: 'Alex', species: 'cichlid', tank_id: 1)
 
 puts( "Seeds were planted!  Check server to see if they've sprouted :) ")
