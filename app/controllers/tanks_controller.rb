@@ -4,6 +4,10 @@ class TanksController < ApplicationController
     render json: Tank.all
   end
 
+  def show
+    render json: Tank.find(params[:id])
+  end
+
   def section
     wantedTanks = Tank.all.select {|tank| tank.section.downcase == params[:sectionName]}
     render json: wantedTanks
