@@ -1,3 +1,3 @@
 class FishSerializer < ActiveModel::Serializer
-  attributes :id, :species, :tank_id
+  attributes :id, :name, :species, :tank_id
 end

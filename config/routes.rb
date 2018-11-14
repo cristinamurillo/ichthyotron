@@ -5,7 +5,7 @@ Rails.application.routes.draw do
    get '/tanks/section/:sectionName', to: 'tanks#section'
 
    resources :feedings, only: [:create]
-   resources :tanks, only: [:index, :create, :update, :destroy]
-   resources :fish, only:[:index, :create, :update, :destroy]
+   resources :tanks, only: [:index, :show, :create, :update, :destroy]
+   resources :fish, only:[:index, :show, :create, :update, :destroy]
 
 end
