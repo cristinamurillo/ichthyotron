@@ -15,7 +15,8 @@ class TanksController < ApplicationController
   end
 
   def update
-    byebug
+    tank = Tank.find(params[:id])
+    tank.update(tank_params)
   end
 
   def destroy
