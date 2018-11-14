@@ -1,5 +1,5 @@
 class TankSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :section
 
   has_many :fish
 end
