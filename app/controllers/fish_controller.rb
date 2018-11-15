@@ -4,6 +4,10 @@ class FishController < ApplicationController
         render json: Fish.all
     end
 
+    def show
+        render json: Fish.find(params[:id])
+    end
+
     def create
         Fish.create(fish_params)
     end
