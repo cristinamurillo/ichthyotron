@@ -23,7 +23,8 @@ class TanksController < ApplicationController
   end
 
   def destroy
-    Tank.destroy(params[:id])
+    tank = Tank.destroy(params[:id])
+    render json: tank
   end
 
   private
