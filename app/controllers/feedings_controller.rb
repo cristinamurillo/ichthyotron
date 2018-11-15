@@ -1,8 +1,8 @@
 class FeedingsController < ApplicationController
 
   def create
-    Feeding.create
-     
+    feeding = Feeding.create.created_at.strftime('%A, %B %e at %l:%M%P')
+    render json: feeding.to_json
   end
 
   def last_meal
