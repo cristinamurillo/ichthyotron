@@ -14,12 +14,14 @@ class TanksController < ApplicationController
   end
 
   def create
-    Tank.create(tank_params)
+    tank = Tank.create(tank_params)
+    render json: tank
   end
 
   def update
-    tank = Tank.find(params[:id])
-    tank.update(tank_params)
+    if Tank.find(params[:id]).update(tank_params)
+        render json: (Tank.find(params[:id]))
+    end
   end
 
   def destroy
